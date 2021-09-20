@@ -48,38 +48,13 @@ One caveat of working in a team that i felt was of major concern:
 # Starting with the project
 First we have gone through the given website, We tried to understand processes or functionality and structure of the website,then we have the website creation into modules and then based on our teammates interest, work is divided amoung them.
 
-# planning out the website
-> "closely examine the each page structure and process of the entire webpage and identifing the main component in the website"
-
-The above step help us to understand the structure of webpage.
-So, After we created blueprint of the website with the help of excalidraw. We divided each part among themseleves.
-
-For a website, The main components are :
-1. UI/UX Design of the webpage.
-2. Functionalities in the webpage.
-
-# Front-end Part
-For the first 2 days, 2 member of my team start working only on UI/UX. They did all the HTML and CSS parts for the webpage. Some point to note :
-* Maintain consistency of working on HTML.
-* Keep Color codes  same as of original website(use extensions also if required)
-* Add Comment on Each and Every part, So that It will give better understanding of each part.
-* Try to merge the code in alternate day or that day itself, Because while merging a lot of issuse arrises at the first time doing project in collabration.
-
-Just an example of how to keep your CSS consistent:
-
-Some points to keep in mind : 
-*   Try to use selectors rather than inline style tag.
-* Use percentages to make website dynamic, Try to avoid usage of pixel.
-* Avoid floats and clear, For Better website alignment use flex and grid.
-* 
 ***Thankyou so much for reading the blog.***
 
 
 
 
-Some snapshots of how out website looks : 
+# Some snapshots of how out website looks : 
 
-REAL ONE
 ## landing page
 ![Cloned landing page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/landing-page.png) 
 ## signup Page
