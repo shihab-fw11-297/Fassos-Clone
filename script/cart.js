@@ -148,7 +148,7 @@ function checkCart() {
           <div class="emptyCart">
             <img
               id="emptyCartImage"
-              src="./images/emptyCart.svg"
+              src="../images/emptyCart.svg"
               alt="empty cart"
             style="width:270px;margin:20px 2px 2px 20px"/>
             <p style="width:270px;margin:auto;text-align:center;    color: rgb(153, 153, 153);
@@ -194,7 +194,7 @@ function checkCart() {
             subtotalButton.id = 'subtotalButton';
             subtotalButton.innerText = 'Checkout';
             subtotalButton.onclick = function () {
-              window.location.href = './Address.html';
+              window.location.href = '../Pages/Address.html';
             };
         
             allCartItems.append(h2, cardList, subTotal, subtotalButton);

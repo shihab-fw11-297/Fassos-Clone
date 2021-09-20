@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login</title>
-  <link rel="shortcut icon"
-    href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
+  <link rel="shortcut icon" href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -243,6 +241,120 @@
   a:link {
     text-decoration: none;
   }
+  
+.popup-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 435px;
+  background: #f5f5f5;
+  font-family: "Raleway";
+  padding: 20px;
+  border-radius: 10px;
+  height: 450px;
+}
+
+
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: #555;
+  border-radius: 10px;
+  color: #eee;
+  font-weight: 600;
+
+
+}
+
+body.popup-active .popup {
+  top: 50%;
+}
+
+body.popup-active .popup-overlay {
+  display: block;
+}
+
+#im {
+  float: left;
+  margin-left: 318px;
+  margin-top: -17px;
+  width: 20%;
+  padding-top: 0px;
+  border-radius: 100%;
+  /* box-shadow: 10px 10px 5px #ccc; */
+  box-shadow: 2px 10px 8px #ccc;
+
+  transform: skewY(10deg);
+  border-color: #3498db;
+
+}
+
+#select {
+  width: 80px;
+  height: 55px;
+  border-radius: 4px;
+  border-color: rgb(155, 187, 187);
+}
+
+#num {
+  width: 329px;
+  height: 54px;
+  border-radius: 4px;
+  border-color: rgb(208, 236, 236);
+}
+
+#enter{
+  float: left;
+}
+
+#btn {
+  width: 430px;
+  height: 50px;
+  margin-bottom: 200px;
+  border-radius: 4px grey;
+  color: rgb(255, 255, 255);
+  /* background-color: rgba(214, 209, 209, 0.945); */
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  border-color: rgb(208, 236, 236);
+  background-color: rgb(223, 209, 17)
+    /* font-family: 'Roboto', sans-serif */
+}
+#btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#last {
+  display: flex;
+  justify-content: center;
+margin-top: -100px;
+}
+#login:hover{
+  cursor: pointer;
+}
+#signup{
+  margin-top: 17px;
+  margin-left: 10px;
+  font-weight: 550;
+}
+#div1{
+  margin-top: -30px;
+}
 </style>
 
 <body>
@@ -251,8 +363,54 @@
       <img src="https://assets.faasos.io/faasos_v2/faasosLogoBrand.svg" alt="faasos" height="72" width="80"
         style="margin-top:40px">
       <div class=" myfirst">
-        <p style="color:#FFEB3B;font-size:20px;font-weight: 600;margin-top: 50px;"><a href="./Collection.html"
-            style="color:#FFEB3B;">login</a></p>
+        <p style="color:#FFEB3B;font-size:20px;font-weight: 600;margin-top: 50px;" id="login">login</p>
+
+            
+                <!-------------------MY code---------------------->
+    <div class='popup-overlay'></div>
+    <div id="popup" class="popup">
+      <div id="modalss">
+        <div id="div1" style="overflow: hidden;">
+          <h1 style="font-family: 'Mulish', sans-serif;margin-left:5px;">
+            <a href="../Pages/Index.html">
+              < </a>&nbsp;Login
+          </h1>
+          <p id="enter" style="color: grey ;font-size:13px; font-family: 'Roboto', sans-serif;margin-left:5px;
+               margin-bottom: 10px;">Enter your phone Number to continue</p>
+          <img id='im' src="https://mir-s3-cdn-cf.behance.net/projects/404/3c673a111780509.Y3JvcCw5OTksNzgyLDAsMA.jpg">
+        </div>
+        <div id="mid">
+          <div id="div2">
+            <form onsubmit="submitForm(event)">
+              <select id="select" value="select">
+                <option value="">India</option>
+                <option value="">USA</option>
+                <option value="">Canada</option>
+                <option value="">UK</option>
+                <option value="">Germany</option>
+                <option value="">Italy</option>
+                <option value="">China</option>
+                <option value="">Japan</option>
+                <option value="">France</option>
+                <option value="">Australia</option>
+                <option value="">Austria</option>
+                <option value="">Pakistan</option>
+                <option value="">srilanka</option>
+              </select>
+
+              <input id="num" type="Number" placeholder="Phone Number required" style="font-size: 20px;"><br><br>
+              <button id="btn">CONTINUE</button>
+            </form>
+          </div>
+          <div id="last">
+            <p style="font-family: 'Roboto', sans-serif;color: grey">Dont have an account?</p>
+            <a id="signup" href="./signup.html" style="text-decoration: none">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
         <button class="but"><a href="./signup.html">Sign Up</a></button>
         <div class="float-r clear">
 
@@ -322,6 +480,11 @@
         more</button></div>
 
   </div>
+
+<div id="containers2">
+
+</div>
+
   <div id="foodie">
     <p class="tap " style="text-align:center;">Here are some additional measures which our kitchen teams are rigorously
       following!</p>
@@ -433,3 +596,5 @@
 </body>
 
 </html>
+
+<script src="../script/top-menu.js"></script>

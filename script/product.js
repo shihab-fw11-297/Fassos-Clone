@@ -889,7 +889,7 @@ function showProduct(fooddetail) {
 
     Customisable
     let star = document.createElement('img');
-    star.src = "./images/star.png"
+    star.src = "../images/star.png"
     star.id = "star"
 
     let btn = document.createElement("button");

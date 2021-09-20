@@ -92,9 +92,13 @@
   <div id="showBar">
     <div id="profilebox">
       <h3 id="Mprofile">Live Orders</h3>
-        <div id="orderdata">
-         
-        </div>
+      <div id="orderdata">
+
+      </div>
+
+      <div id="sucsess">
+
+      </div>
     </div>
   </div>
 
@@ -250,49 +254,74 @@
   }
   showProduct3()
 
-function order(){  
-  let cartData = JSON.parse(localStorage.getItem('cart'));
-  let dataDiv = document.getElementById("orderdata");  
+
+  let dataDiv = document.getElementById("orderdata");
+
+  function order() {
+    let cartData = JSON.parse(localStorage.getItem('cart'));
+
+
+    cartData.forEach(function (product) {
+      let div = document.createElement("div")
+      div.id = "prod"
+
+      let pdescription = document.createElement('p');
+      pdescription.innerText = "Description : " + product.description;
+      pdescription.id = "proddesc"
+
+      let pname = document.createElement('p');
+      pname.innerText = "Name : " + product.name;
+      pname.id = "prodName"
+
+      let pveg = document.createElement('p');
+      pveg.innerText = "Meals Type : " + product.veg_nonVeg;
+      pveg.id = "prodveg"
+
+      let pprice = document.createElement('p');
+      pprice.innerText = "Price : ₹" + product.price;
+      pprice.id = "prodPrice"
+
+      let process = document.createElement('p');
+      process.innerText = "Your Order will be processes"
+      process.id = "prodName"
+
+      let image = document.createElement('img');
+      image.src = product.img_src;
+      image.id = "prodImage"
+
+      div.append(image, pdescription, pname, pveg, pprice, process);
+      dataDiv.append(div)
+
+    });
+
+  }
+  order();
+
+  setTimeout(function () {
+    document.getElementById("orderdata").style.display = "none"
+    localStorage.removeItem("cart");
+
+  }, 4000);
+
   
-        cartData.forEach(function (product) {
-            let div = document.createElement("div")
-            div.id = "prod"
+  let done = document.getElementById("sucsess");
 
-            let pdescription = document.createElement('p');
-            pdescription.innerText = "Description : " + product.description;
-            pdescription.id = "proddesc"
+  setTimeout(function () {
 
-            let pname = document.createElement('p');
-            pname.innerText ="Name : " + product.name;
-            pname.id = "prodName"
+    let divs = document.createElement("div")
+    divs.id = "done-Message"
 
-            let pveg = document.createElement('p');
-            pveg.innerText = "Meals Type : " +product.veg_nonVeg;
-            pveg.id = "prodveg"
+    let dones = document.createElement('p');
+    dones.innerText = "your order has been Sucsessfully Deliverd"
+    dones.id = "completed"
 
-            let pprice = document.createElement('p');
-            pprice.innerText = "Price : ₹" +product.price;
-            pprice.id = "prodPrice"
+    let image = document.createElement('img');
+    image.src = "../images/sucsess.gif"
+    image.id = "mes"
 
-            let process = document.createElement('p');
-            process.innerText = "Your Order will be processes"
-            process.id = "prodName"
+    divs.append(dones)
+    done.append(image,divs)
+  }, 4500);
 
-            let image = document.createElement('img');
-            image.src = product.img_src;
-            image.id = "prodImage"
-
-            div.append(image, pdescription,pname, pveg,pprice,process);
-            dataDiv.append(div)
-
-        });
-
-      }
-      order();
-
-      setTimeout(function(){ 
-        alert("your order has been deliverd"); 
-        localStorage.removeItem("cart");
-      }, 100);
 
 </script>

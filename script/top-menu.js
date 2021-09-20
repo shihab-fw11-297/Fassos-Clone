@@ -1,15 +1,25 @@
     var open = document.getElementById("login")
-    var close = document.getElementById("close1")
+    var opens = document.getElementById("reg")
+    var close = document.getElementById("body")
     // console.log(close)
     // console.log(open)
     open.addEventListener("click", function () {
+      document.getElementById("containers2").style.display = "none"
       document.body.classList.add("popup-active");
     })
- 
+
+    opens.addEventListener("click", function () {
+      document.getElementById("containers1").style.display = "none"
+      document.body.classList.add("popup2-active");
+    })
+
+
+
     function submitForm(event) {
       var flage = false;
       var  arr_login=[];
       var number = document.getElementById("num").value;
+      document.getElementById("num").value="";
       let info = localStorage.getItem("info");
       info = JSON.parse(info);
       for (key in info) {

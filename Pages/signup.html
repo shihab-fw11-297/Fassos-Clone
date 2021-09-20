@@ -10,7 +10,8 @@
         href="https://assets.faasos.io/order.faasos.io/production/app/public/images/faviconFaasos.png" />
     <style>
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/signupbackground.png);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/signupbackground.png);
+            background-size: cover;
         }
 
         * {
@@ -18,7 +19,7 @@
             padding: 0px;
         }
 
-        .containers {
+        #containers2 {
             display: flex;
             justify-content: center;
         }
@@ -117,16 +118,135 @@
         #btm:hover {
             cursor: pointer;
         }
+          
+.popup-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 435px;
+  background: #f5f5f5;
+  font-family: "Raleway";
+  padding: 20px;
+  border-radius: 4px;
+  height: 450px;
+}
+
+
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: #555;
+  border-radius: 10px;
+  color: #eee;
+  font-weight: 600;
+
+
+}
+
+body.popup-active .popup {
+  top: 50%;
+}
+
+body.popup-active .popup-overlay {
+  display: block;
+}
+
+#im {
+  float: left;
+  margin-left: 318px;
+  margin-top: -17px;
+  width: 20%;
+  padding-top: 0px;
+  border-radius: 100%;
+  /* box-shadow: 10px 10px 5px #ccc; */
+  box-shadow: 2px 10px 8px #ccc;
+
+  transform: skewY(10deg);
+  border-color: #3498db;
+
+}
+
+#select {
+  width: 80px;
+  height: 55px;
+  border-radius: 4px;
+  border-color: rgb(155, 187, 187);
+}
+
+#num {
+  width: 329px;
+  height: 54px;
+  border-radius: 4px;
+  border-color: rgb(208, 236, 236);
+}
+
+#enter{
+  float: left;
+}
+
+#btn {
+  width: 430px;
+  height: 50px;
+  margin-bottom: 200px;
+  border-radius: 4px grey;
+  color: rgb(255, 255, 255);
+  /* background-color: rgba(214, 209, 209, 0.945); */
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  border-color: rgb(208, 236, 236);
+  background-color: rgb(223, 209, 17)
+    /* font-family: 'Roboto', sans-serif */
+}
+#btn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#last {
+  display: flex;
+  justify-content: center;
+margin-top: -100px;
+}
+#login:hover{
+  cursor: pointer;
+}
+#signup{
+  margin-top: 17px;
+  margin-left: 10px;
+  font-weight: 550;
+}
+#p1s{
+    float: left;
+    width: 200px;
+}
+#login{
+    font-weight: 600;
+    color: blue;
+}
     </style>
 </head>
 
 <body>
-    <div class="containers">
-        <form onsubmit="submitForm(event)">
+    <div id="containers2">
+        <form onsubmit="submitForms(event)">
             <div class="hero">
                 <div id="div1">
                     <h2 style="font-family: 'Mulish', sans-serif;padding-top:10px;padding-left:24px"> <a
-                            href="./mainpage.html">
+                            href="./Collection.html">
                             <</a> Sign Up </h2>
                     <img id='ims'
                         src="https://mir-s3-cdn-cf.behance.net/projects/404/3c673a111780509.Y3JvcCw5OTksNzgyLDAsMA.jpg">
@@ -170,13 +290,61 @@
                             href="#">Terms and Conditions</a></p>
                 </div><br><br><br>
                 <div>
-                    <p id="p1s" style="font-family: 'Mulish', sans-serif;color:grey"> Already have an account ? <a
-                            href="mainpage.html">Login</a></p>
+                    <p id="p1s" style="font-family: 'Mulish', sans-serif;color:grey"> Already have an account ? </p>
+                    <p id='login'>Login</a></p>
+
+
                 </div>
             </div>
         </form>
-
     </div>
+
+                               <!-------------------MY code---------------------->
+    <div id="containers3">
+    <div class='popup-overlay'></div>
+    <div id="popup" class="popup">
+      <div id="modalss">
+        <div id="div1" style="overflow: hidden;">
+          <h1 style="font-family: 'Mulish', sans-serif;margin-left:5px;">
+            <a href="../Pages/Index.html">
+              < </a>&nbsp;Login
+          </h1>
+          <p id="enter" style="color: grey ;font-size:13px; font-family: 'Roboto', sans-serif;margin-left:5px;
+               margin-bottom: 10px;">Enter your phone Number to continue</p>
+          <img id='im' src="https://mir-s3-cdn-cf.behance.net/projects/404/3c673a111780509.Y3JvcCw5OTksNzgyLDAsMA.jpg">
+        </div>
+        <div id="mid">
+          <div id="div2">
+            <form onsubmit="submitForm(event)">
+              <select id="select" value="select">
+                <option value="">India</option>
+                <option value="">USA</option>
+                <option value="">Canada</option>
+                <option value="">UK</option>
+                <option value="">Germany</option>
+                <option value="">Italy</option>
+                <option value="">China</option>
+                <option value="">Japan</option>
+                <option value="">France</option>
+                <option value="">Australia</option>
+                <option value="">Austria</option>
+                <option value="">Pakistan</option>
+                <option value="">srilanka</option>
+              </select>
+
+              <input id="num" type="Number" placeholder="Phone Number required" style="font-size: 20px;"><br><br>
+              <button id="btn">CONTINUE</button>
+            </form>
+          </div>
+          <div id="last">
+            <p style="font-family: 'Roboto', sans-serif;color: grey">Dont have an account?</p>
+            <a id="signup" href="./signup.html" style="text-decoration: none;margin-top: -1px;">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    
     <script>
         if (!localStorage.getItem("info")) {
             localStorage.setItem("info", JSON.stringify([]))
@@ -187,7 +355,7 @@
 
 
 
-        function submitForm(event) {
+        function submitForms(event) {
             var flage1 = false, flage2 = false, flage3 = false;
             var numberlen = document.getElementById('nums').value;
             var obj = {};
@@ -229,7 +397,7 @@
                 alert("Registration sucsessfully copleted")
                 localStorage.setItem("info", JSON.stringify(info_data))
                 event.preventDefault();
-                location.href = "./mainpage.html";
+                location.href = "./Index.html";
             }
             // if( flage3 && flage1){
             //     console.log("annyee")
@@ -245,3 +413,5 @@
 </body>
 
 </html>
+
+<script src="../script/top-menu.js"></script>

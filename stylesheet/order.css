@@ -364,3 +364,20 @@ p > span {
   font-weight: 550;
   color:  rgb(51, 51, 51);
 }
+
+#mes{
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+#completed{
+  margin-top: 70px;
+  margin-left: 15px;
+  font-size: 30px;
+  float: left;
+}
+#sucsess{
+  margin-left: 35%;
+  width: 40%;
+}
