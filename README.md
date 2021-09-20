@@ -1,5 +1,5 @@
 # Learn by Cloning : fassos Project Clone
-## As a team Cloning a project from Scartch.
+## This clone is made with pure HTML, CSS and JavaScript.
 
 # Team Members
    * Shihab Shaikh
