@@ -1,32 +1,36 @@
 # Learn by Cloning : fassos Project Clone
 ## As a team Cloning a project from Scartch.
 
-#Team Members
-   Shihab Shaikh
-   Kiran Medikurthy
-   Abhishek Singh
-   Deeptesh Bishwas
+# Team Members
+   * Shihab Shaikh
+   * Kiran Medikurthy
+   * Abhishek Singh
+   * Deeptesh Bishwas
 
-Let me give idea about, What we are going to discuss in this blog, We made project during the **construct week** at **Masai School**. There were a total 33 teams, and each team was assigned a website to clone, and we got **Fassos**. Being in unit-2, My team has only liberty to use HTML, CSS,  and Javascript. This blog give power of cloning the Fassos Webpage  with help of above mentioned  techstack. 
 
-Some snapshots of how out website looks : 
 
-REAL ONE
-## landing page
-![Cloned landing page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/landing-page.png) 
-## signup Page
-![sign up](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/sign-up.png);
-## Login Page
-![login page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/login.png);
-## landing page(When user Login into the website)
-![indexpage](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/index-page.png);
-## Order Page
-![order Page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/order%20page.png);
-## Address page
-![Address page 1](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/address%20page.png);
-![Address page 2](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/address%20page%202.png);
-## Payment Page
-![Payment page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/payment%20page.png);
+# Functionality
+* Main Functionalities in our projects were :
+    * Login/Signup
+    * Products
+    * Cart
+    * Payment
+    * Adding Address
+     
+     
+ * Main UI/UX Highlights:
+      * Fully responsive website (Across all devices)
+      * All colors used are same as that of original one
+      * All products have their own images and details (same as of original one)
+      * Original Faasos Youtube video embedded
+         
+# How To Use
+
+First User Come to the Index page and user can see two option Login and Sign Up , If User alredy Sign Up then user login other wise user Create New Account andthen Login.
+and then user Redirected to Product Page and see a list of Fassos product, In Product Page user Fielter Product as per Meals and Offers and Also Search Product 
+as Per user Requirement,After user Add Multiple Product as per Requirement after When the user click on process User has to Redirected in Address Page And
+Fill address and the user autoMatically Redirected to Payment page and User Fill Payment Details Once a Payment Done User Automatically Redirected to Orders Page and user see list of orders an once a orers Is Deliverd user can See a successfull Message on screen.
+
 
 # Working in Team
 
@@ -67,33 +71,30 @@ Some points to keep in mind :
 *   Try to use selectors rather than inline style tag.
 * Use percentages to make website dynamic, Try to avoid usage of pixel.
 * Avoid floats and clear, For Better website alignment use flex and grid.
-
-# Functionality
-* Main Functionalities in our projects were :
-    * Login/Signup
-    * Products
-    * Cart
-    * Payment
-    * Adding Address
-
-There are more funtionalities, But let's just focus on the main ones right now.
-
-Firstly we need forms to get details of users:
-image
-
-
-
-So, We have used set eventlisthener to form and can store the data of users in out localStorage When user submit the form. 
-
-Below is some idea about how data stored in out localStorage :
-image
-
-Some of the Key point to note in javascript(localStorage)
-* Avoid usage of var, Use let and const.
-* Use JSON.Parse and JSON.Stringify to retrieve and to store from the LocalStorage.
-* Make seperate function for different task, It will be helpful is debugging of the code.
-
+* 
 ***Thankyou so much for reading the blog.***
+
+
+
+
+Some snapshots of how out website looks : 
+
+REAL ONE
+## landing page
+![Cloned landing page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/landing-page.png) 
+## signup Page
+![sign up](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/sign-up.png);
+## Login Page
+![login page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/login.png);
+## landing page(When user Login into the website)
+![indexpage](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/index-page.png);
+## Order Page
+![order Page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/order%20page.png);
+## Address page
+![Address page 1](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/address%20page.png);
+![Address page 2](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/address%20page%202.png);
+## Payment Page
+![Payment page](https://github.com/kirankumar-medikurthy/MasaiProject-Unit-2/blob/main/scrrenshort/payment%20page.png);
 
 
   
