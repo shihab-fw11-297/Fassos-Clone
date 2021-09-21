@@ -341,7 +341,7 @@ input {
   min-width: 50%;
   margin-left: 10px;
   padding-bottom: 100px;
-  height: fit-content;
+  overflow: hidden;
 }
 
 #prod{
@@ -670,6 +670,8 @@ p > span {
   -webkit-box-align: center;
   align-items: center;
   cursor: pointer;
+  position:relative;
+
 }
 
 .cartItemCount > #increase {
@@ -790,3 +792,5 @@ p > span {
           transform: translateY(-100%);
           transition: all .3s ease-in-out;
       }
+
+  
